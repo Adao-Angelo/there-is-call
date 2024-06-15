@@ -2,11 +2,11 @@ import Express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 import { config } from "dotenv";
 import { AppError } from "./errors/appErrors";
-import { router } from "./routes";
+import { routes } from "./routes";
 
 const app = Express();
 app.use(Express.json());
-app.use(router);
+app.use(routes);
 
 config();
 
