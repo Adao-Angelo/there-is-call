@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Of get geo-location</title>
+  </head>
+  <body>
+    <script>
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+          },
+          function (error) {
+            console.error(`Erro ao obter localização: ${error.message}`);
+          }
+        );
+      } else {
+        console.error("Seu navegador não suporta geolocalização");
+      }
+    </script>
+  </body>
+</html>

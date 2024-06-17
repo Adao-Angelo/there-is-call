@@ -7,6 +7,10 @@ class Create_user_use_case {
   async execute(user: I_user, Location: I_location) {
     const location = await get_user_location(Location);
 
+    if (user.type_account == "agent") {
+      
+      
+    }
     const result = await this.user_repository.create_user({
       name: user.name,
       email: user.email,
