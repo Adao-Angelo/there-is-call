@@ -12,8 +12,10 @@ class Service_repository implements I_service_repository {
     });
   }
 
-  list_services_by_name(): Promise<[]> {
-    throw new Error("Method not implemented.");
+  async list_services_by_name(title: string): Promise<any[]> {
+    return await prismaClient.service.findMany({
+      where: { title: title },
+    });
   }
 }
 
