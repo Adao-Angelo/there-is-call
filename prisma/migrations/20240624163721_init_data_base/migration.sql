@@ -13,8 +13,9 @@ CREATE TABLE "users" (
 -- CreateTable
 CREATE TABLE "services" (
     "id" TEXT NOT NULL PRIMARY KEY,
-    "tittle" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
     "agent_id" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
     "volume" REAL NOT NULL
 );
 

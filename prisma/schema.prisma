@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:../src/database/db.db"
+  url      = "file:../database/db.db"
 }
 
 model User {
@@ -22,7 +22,7 @@ model User {
 
 model service {
   id       String @id @default(cuid())
-  title   String
+  title    String
   agent_id String
   location String
   volume   Float
