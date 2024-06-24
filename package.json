@@ -7,7 +7,7 @@
     "dev": "tsx watch ./src/server.ts",
     "migrate": "npx prisma migrate dev",
     "biulder": "tsup ./src",
-    "live": "node ./dist/server.js "
+    "live": "node ./dist/server.js"
   },
   "keywords": [],
   "author": "",
