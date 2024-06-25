@@ -24,10 +24,8 @@ async function get_user_location({ latitude, longitude }: I_location) {
       return "No results found.";
     }
   } catch (error) {
-    // throw new AppError(`Error to get user location ! error:${error}`, 400);
+    throw new AppError(`Error to get user location ! ${error}`, 400);
   }
 }
-
-get_user_location({ latitude: "8.84", longitude: "13,23" });
 
 export { get_user_location };

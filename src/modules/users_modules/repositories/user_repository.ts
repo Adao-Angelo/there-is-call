@@ -10,6 +10,28 @@ class User_repository implements I_user_repository {
       data: user,
     });
   }
+
+  async findByEmail(email: string): Promise<any> {
+    return await prismaClient.user.findFirst({
+      where: { email: email },
+    });
+  }
+
+  async remove(id: string): Promise<any> {
+    await prismaClient.user.delete({
+      where: { id: id },
+    });
+  }
+
+  async list() {
+    return prismaClient.user.findMany();
+  }
+
+  async listUserById(userId: string): Promise<any> {
+    return await prismaClient.user.findFirst({
+      where: { id: userId },
+    });
+  }
 }
 
 export { User_repository };
